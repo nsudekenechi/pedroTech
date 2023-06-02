@@ -1,0 +1,1 @@
+export const Error = () => { return <h1>Couldn't find You</h1> }
