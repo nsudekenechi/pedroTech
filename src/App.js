@@ -1,10 +1,10 @@
-import { Form } from "./Form";
-
+import { useToggle } from "./useToggle";
 function App() {
-
+  const [visible, toggleVisible] = useToggle()
   return (
     <div className="App">
-      <Form />
+      <button onClick={toggleVisible}>{visible ? "Show" : "Hide"}</button>
+      <h1>{visible ? "Hidden" : "Shown"}</h1>
     </div>
   );
 }
