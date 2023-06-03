@@ -5,9 +5,9 @@ export const Form = () => {
     const schema = yup.object({
         firstName: yup.string().required("Field cannot be empty!"),
         email: yup.string().email("Email Address not Valid").required(),
-        age: yup.number().min(18).positive().required().integer(),
+        age: yup.number().min(18).positive().required("Please Enter Age").integer(),
         password: yup.string().min(4).max(20).required(),
-        confirmPassword: yup.string().oneOf([yup.ref("password"), null]).required()
+        confirmPassword: yup.string().oneOf([yup.ref("password"), null], "Passwords Don't match").required()
     })
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
 
