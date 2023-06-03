@@ -2,7 +2,7 @@ import { useState } from "react";
 import { profileContext } from "./myContext";
 import { Profile } from "./profile";
 
-
+// Using Context
 function App() {
     const [name, setName] = useState("john")
     return (

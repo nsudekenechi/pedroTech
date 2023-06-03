@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import QueryFetch from "./QueryFetch";
+// Using react-query to fetch data
 function App() {
   const client = new QueryClient({
     defaultOptions: {
