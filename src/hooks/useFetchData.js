@@ -6,5 +6,5 @@ export const useFetchData = (url) => {
         refetch();
     }
 
-    return [data]
+    return [data, refetchData]
 }

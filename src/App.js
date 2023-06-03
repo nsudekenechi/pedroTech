@@ -1,12 +1,10 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Cat } from "./components/Cat";
+import { Counter } from "./components/Counter";
+
 function App() {
-  const client = new QueryClient()
+
   return (
     <div className="App">
-      <QueryClientProvider client={client}>
-        <Cat />
-      </QueryClientProvider>
+      <Counter />
     </div>
   );
 }
