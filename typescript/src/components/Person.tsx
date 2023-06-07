@@ -13,6 +13,9 @@ export enum Country {
 }
 export const Person: React.FC<props> = ({ name, age, friends, country }) => {
   const [Name, setName] = useState<string>("");
+  const getAge = (name: string): string => {
+    return "John";
+  };
   return (
     <div>
       <h1>My name is {name}</h1>
