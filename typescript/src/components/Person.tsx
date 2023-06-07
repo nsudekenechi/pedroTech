@@ -4,8 +4,14 @@ interface props {
   name: string;
   age: number;
   friends: string[];
+  country: string;
 }
-export const Person: React.FC<props> = ({ name, age, friends }) => {
+export enum Country {
+  Brazil = "Brazil",
+  India = "India",
+  London = "London",
+}
+export const Person: React.FC<props> = ({ name, age, friends, country }) => {
   const [Name, setName] = useState<string>("");
   return (
     <div>
@@ -17,6 +23,7 @@ export const Person: React.FC<props> = ({ name, age, friends }) => {
           <span key={item}> {item} </span>
         ))}
       </h1>
+      <h1>My Country is {country}</h1>
     </div>
   );
 };
